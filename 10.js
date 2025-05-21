@@ -3,12 +3,21 @@ let num = prompt("Enter a number: ");
 const arr = num.split("");
 let sum = 0;
 
-const primeDigits = ['2', '3', '5', '7'];
-
 for (let digit of arr) {
-    if (primeDigits.includes(digit)) {
-        console.log("Prime digit in given number:", digit);
-        sum += Number(digit);
+    let n = Number(digit);
+    let isPrime = true;
+    if(n<2){
+        isPrime = false;
+    }else{
+        for(let i=2; i<Math.floor(n/2)+1; i++){
+            if(n%i==0){
+                isPrime = false;
+            }
+        }
+    }
+    if(isPrime){
+        console.log("prime digit: ",n);
+        sum += n;
     }
 }
 
