@@ -12,6 +12,7 @@ for (let digit of arr) {
         for(let i=2; i<Math.floor(n/2)+1; i++){
             if(n%i==0){
                 isPrime = false;
+                break;
             }
         }
     }
