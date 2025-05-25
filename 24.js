@@ -1,4 +1,4 @@
-let celsius = Number(prompt("Enter temperature in Celsius:"));
+let celsius = Number(prompt("Enter temperature in Celsius: "));
 
 let fahrenheit = (celsius * 9/5) + 32;
 
